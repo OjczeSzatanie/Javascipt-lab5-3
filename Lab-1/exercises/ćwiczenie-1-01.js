@@ -6,7 +6,7 @@ let area = 1;
 let radius = '';
 if(area>0)
 radius = Math.sqrt(area/Math.PI).toPrecision(2);
-else
+elseń
 radius = "not good"
 console.log(radius)
 
