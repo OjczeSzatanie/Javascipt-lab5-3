@@ -5,7 +5,7 @@
  * Jeśli decimalNumber jest równe undefined lub null to umieść w romanNumber komunikat: Decimal number is undefined or null!
  */
 let decimalNumber = 4;
-let romanNumber = 'IV';
+let romanNumber = '';
 /*
     Wpisz kod zadania w miejscu tego komentarza.
 */
