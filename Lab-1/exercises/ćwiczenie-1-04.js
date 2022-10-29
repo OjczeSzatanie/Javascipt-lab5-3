@@ -5,7 +5,8 @@
 
 let length = 5;
 let randomString = '';
-/*
-    Wpisz kod zadania w miejscu tego komentarza.
-*/
+
+randomString = Math.random().toString(36).substring(2, lenght)
+
+
 console.log(randomString);

@@ -15,7 +15,19 @@ let rectWidth = 7;
 let rectHeight = 5;
 let rectBorderSymbol = '#';
 let rectString = '';
-/*
-    Wpisz kod zadania w miejscu tego komentarza.
-*/
+
+if(rectWidth< 0 || rectWidth>81|| rectHeight<0 || rectHeight>81|| rectBorderSymbol.length != 1)
+rectString = "not good";
+else
+for(let i = 1; i <= rectHeight;i++)
+{
+ for (let d =1 ; d<= rectWidth; d++){
+    if(i == 1|| i == rectHeight|| d== 1|| d== rectWidth)
+    rectString +=rectBorderSymbol;
+    else
+    rectString += " ";
+}
+rectString += '\n';
+}
+
 console.log(rectString);

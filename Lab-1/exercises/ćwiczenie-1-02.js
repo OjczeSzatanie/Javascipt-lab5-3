@@ -10,7 +10,15 @@
  */
 let height = 5;
 let triangle = '';
-/*
-    Wpisz kod zadania w miejscu tego komentarza.
-*/
+let value = 1;
+
+if(height<0) triangle = "not good height";
+else
+for(let i =0; i<height;i++){
+    for(let d=0; d <value;d++)
+    triangle += "#";
+    triangle += "/n";
+    value++;
+}
+
 console.log(triangle);

@@ -12,7 +12,6 @@
 let n = 34;
 let m = 190;
 let progressBar = ""
-/*
-    Wpisz kod zadania w miejscu tego komentarza.
-*/
+
+
 console.log(progressBar)

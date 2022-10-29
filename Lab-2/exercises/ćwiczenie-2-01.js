@@ -5,9 +5,14 @@
  * radius(4, 2, -2, "a")    -> [1.1283791670955126, 0.7978845608028654, NaN, NaN] 
  * radius()                 -> []
  */
-function radius(){
+function radius(area){
     //kod funkcji
-}
+    
+let radius = area / area / Math.PI;
+return radius;        
+    };
+
+
 /**
  * Testy. Nic nie zmieniaj!!!
  */
