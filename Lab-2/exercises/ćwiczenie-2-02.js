@@ -14,8 +14,15 @@
  * car.drive(100, 1);                   //jedziemy przez godzinę z prędkością 100 km/h
  * console.log(car.mileage);            //stan licznika: 100
  */
-function Car(weight, model, power){
-    //kod funkcji
+ function Car(weight, model, power){
+    this.mileage= 0;
+    this.weight = weight;
+    this.model = model;
+    this.power = power;   
+    this.drive = function Drive(speed,hours){
+        if(speed <0 || hours<0) return;
+        this.mileage += speed*hours;  
+    }
 }
 
 //Testy

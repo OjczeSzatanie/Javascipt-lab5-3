@@ -6,8 +6,31 @@
  * Załóż, że w łańcuchu są słowa oddzielone tylko spacją (brak kropek, przecinków itd.)
  */
 
-function longestWord(sentence){
-    //kod funkcji
+ function longestWord(sentence){
+    
+   
+    let maxword = "";
+    let word = "";
+    let maxlength = 0;
+    let count =0 
+    if(sentence==null) return word;
+    for(let i =0; i<sentence.length;i++)
+    if(sentence[i] ==" ")
+    {
+        if(count > maxlength){
+            maxword= word;
+            maxlength = count;
+            count=0;
+            word="";
+        }
+        
+    }
+    else
+    {
+    word += sentence[i];
+    count++
+    }
+    return maxword;
 }
 
 

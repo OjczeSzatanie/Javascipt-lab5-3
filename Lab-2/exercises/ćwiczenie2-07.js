@@ -4,7 +4,7 @@
  * Zapis do pola powinien być możliwy tylko, gdy wartość argumentu jest między 0 a capacity włącznie
  * Setter powinien "pilnować", aby w _level nie było wartości ujemnej i większęj od pola capacity. 
  */
-let tank = {
+ let tank = {
     capacity: 100,
     _level: 10,             //pole na którym działają getter i setter level
     //dodaj setter i getter o nazwie 'level'

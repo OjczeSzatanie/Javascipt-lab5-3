@@ -5,14 +5,14 @@
  * radius(4, 2, -2, "a")    -> [1.1283791670955126, 0.7978845608028654, NaN, NaN] 
  * radius()                 -> []
  */
-function radius(area){
-    //kod funkcji
-    
-let radius = area / area / Math.PI;
-return radius;        
-    };
-
-
+ function radius(...numbers) {
+    let array =[];
+    for (let i = 0; i < numbers.length; i++)
+    {
+        array[i] = Math.sqrt(numbers[i] / Math.PI)
+    }
+    return array;
+}
 /**
  * Testy. Nic nie zmieniaj!!!
  */
@@ -41,4 +41,3 @@ if (result instanceof Array
 } else {
     console.log("Test 13 failed!")
 }
-

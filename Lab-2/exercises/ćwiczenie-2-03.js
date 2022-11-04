@@ -2,7 +2,7 @@
  * Dana jest poniższa funkcja wyższego rzędu filtrująca tablicę.
  * Drugi argument jest funkcją.
  */
-function selectItems(arr, filter) {
+ function selectItems(arr, filter) {
     let result = [];
     if (filter instanceof Function) {
         for (let item of arr) {
@@ -19,8 +19,8 @@ function selectItems(arr, filter) {
  * - otrzymać tablicę imion zaczynających się literą A 
  */
 let names = ["Adam", "Ewa", "Karol", "Robert", "Franciszek", "Ala", "Tom", "Arkadiusz"];
-let threeLetersNames = selectItems(names);         //dodaj drugi arguemnt
-let startsWithANames = selectItems(names);         //dodaj drugi argument
+let threeLetersNames = selectItems(names,function filter(name){if(name.length == 3) return true;});         //dodaj drugi arguemnt
+let startsWithANames = selectItems(names,function filter(name){if(name[0] == "A") return true;});         //dodaj drugi argument
 
 
 //Testy
@@ -34,6 +34,5 @@ if (startsWithANames.length === 3 && startsWithANames.includes("Adam", "Ala", "A
 } else {
     console.log("Test 32 failed");
 }
-
 
 

@@ -14,18 +14,18 @@
  * creator
  * Obiekty `email` i `SMS` powinny mieć ten sam prototyp w postaci obiektu `message`
  */
-let message = {};           //zmień definicje obiektu 
-let email = {};             //zmień definicje obiektu
-let SMS = {};               //zmień definicję obiektu
-
-//Testy
-if (email.__proto__ === SMS.__proto__ && email.__proto__ !== {}.__proto__){
-    console.log("Test 61 passed");
-} else {
-    console.log("Test 61 failed");
-}
-if (email.creator) {
-    console.log("Test 62 passed");
-} else {
-    console.log("Test 62 failed");
-}
+ let message = {};           //zmień definicje obiektu 
+ let email = {};             //zmień definicje obiektu
+ let SMS = {};               //zmień definicję obiektu
+ 
+ //Testy
+ if (email.__proto__ === SMS.__proto__ && email.__proto__ !== {}.__proto__){
+     console.log("Test 61 passed");
+ } else {
+     console.log("Test 61 failed");
+ }
+ if (email.creator) {
+     console.log("Test 62 passed");
+ } else {
+     console.log("Test 62 failed");
+ }
