@@ -17,7 +17,7 @@ else
 for(let i =0; i<height;i++){
     for(let d=0; d <value;d++)
     triangle += "#";
-    triangle += "/n";
+    triangle += "\n";
     value++;
 }
 

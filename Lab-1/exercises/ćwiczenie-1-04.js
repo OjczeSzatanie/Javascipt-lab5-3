@@ -3,10 +3,10 @@
  * Wygenerowany Łańcuch umieść w zmiennej randomString  
  */
 
-let length = 5;
+let length = 12;
 let randomString = '';
 
-randomString = Math.random().toString(36).substring(2, lenght)
+randomString = Math.random().toString(36).substring(2, length)
 
 
 console.log(randomString);

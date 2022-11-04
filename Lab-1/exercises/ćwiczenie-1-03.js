@@ -4,23 +4,19 @@
  * Jeśli decimalNumber nie mieści sie w zakresie to umieść w romanNumber komunikat: Decimal number is out of range!
  * Jeśli decimalNumber jest równe undefined lub null to umieść w romanNumber komunikat: Decimal number is undefined or null!
  */
-let decimalNumber = 4;
+let decimalNumber = 7;
 let romanNumber = '';
-/*
-    Wpisz kod zadania w miejscu tego komentarza.
-*/
-if(decimalNumber <1 || decimalNumer >10)
+
+if(decimalNumber < 1 || decimalNumber >10)
 romanNumber = "Decimal number is out of range!"
 else if(decimalNumber == null || typeof(decimalNumber) == undefined)
 romanNumber = "Decimal number is undefined or null!"
 else
 romanNumber += convertToRoman(decimalNumber)
 
-
-
 console.log(romanNumber);
 
-function convertToRoman(number){
+function convertToRoman(num){
     if(num == 1){return 'I'}
     if(num == 2){return 'II'}
     if(num == 3){return 'III'}
