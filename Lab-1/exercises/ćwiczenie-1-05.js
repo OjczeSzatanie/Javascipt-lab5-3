@@ -16,18 +16,18 @@ let bar = [];
 bar[0] = '|';
 bar[49] ='|';
 
-let k = Math.round((n/m)*100);
-if(k>98) k=98;
+let l = Math.round((n/m)*100);
+if(l>98) l=98;
 
-for(let i =1; i <Math.floor(k/2);i++)
+for(let i =1; i <Math.floor(l/2);i++)
     bar[i] ='#'
 
-for(let f = Math.floor(k/2);f <49; f++)
-    bar[f] =" ";
+for(let r = Math.floor(l/2);r <49; r++)
+    bar[r] =" ";
 
 for(let x=0;x<50; x++)
 progressBar += bar[x];
 progressBar +='\n';
-progressBar += `0%                      ${k}%                     100%`;
+progressBar += `0%                      ${l}%                     100%`;
 
 console.log(progressBar)
