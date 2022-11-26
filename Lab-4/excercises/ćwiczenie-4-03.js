@@ -6,8 +6,20 @@
  * console.log(frequences("abcdagcc"));
  * Map(5) {size: 5, a => 2, b => 1, c => 3, d => 1, g => 1}
  */
-function frequences(str){
-
+ function frequences(str){
+    const counts = new Map();
+    
+    for (const ch of str) {
+        let count = counts.get(ch);
+        if(count){
+            count = counts.get(ch);
+        } else {
+            count = 0;
+        }
+        counts.set(ch, count + 1);
+    }
+    
+    return counts;
 }
 
 try{

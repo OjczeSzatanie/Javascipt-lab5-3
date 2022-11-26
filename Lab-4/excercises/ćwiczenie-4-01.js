@@ -24,7 +24,65 @@
  *  Dopasuj konstruktor do przykładowego wywołania w testach.
  */
 class TodoTask {
-    
+
+#descritption
+#deadline
+#done
+#finished
+#created
+
+constructor(description, deadline){
+    this.#deadline = deadline;
+    this.#done = false;
+    this.#descritption = description;
+    this.#finished = null;
+    this.#created = new Date();
+}
+
+get done(){
+    return this.#done;
+}
+
+set done(value){
+    if(this.#canChange()){
+        this.#finished = new Date();
+        this.#done = value;
+    }
+}
+
+get deadline() {
+        return this.#deadline;
+
+}
+
+get finished(){
+    return this.#finished;
+}
+
+get created(){
+    return this.#created;
+}
+
+get description(){
+    return this.#descritption;
+}
+
+set description(value){
+    if(this.#canChange()){
+        this.#descritption = value;
+    }
+}
+
+
+set deadline(value) {
+    if(this.#canChange()){
+        this.#deadline = value;
+    }
+}
+
+#canChange(){
+    return !this.#done && (this.#deadline - Date.now()) >= 0;
+}
 }
 
 
