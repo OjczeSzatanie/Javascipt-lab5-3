@@ -11,51 +11,47 @@
  * 'Impossible to complete the transaction. Amount is negative!'  
  */
 
-function makeTransaction(transaction){
+
+    function makeTransaction(transaction){
+        const klucze = ["amount", "sourceAccount", "targetAccount"];
     
-    let e; 
-
-    if (amount <=0 && amount== undefined)
-   e = "Impossible to complete the transaction. Absent property <propert-name> in transaction!"
-    console.log(e)
-
-    if (sourceAccount <=0 && amount== undefined)
-    e="Impossible to complete the transaction. Absent property <propert-name> in transaction!"
-    console.log(e)
-
-
-    if (targetAccount <=0 && amount== undefined)
-    e="Impossible to complete the transaction. Absent property <propert-name> in transaction!"
-    console.log(e)
+        for(const klucz of klucze) {
+          if(!transaction.hasOwnProperty(klucz)) {
+            throw new Error(`Impossible to complete the transaction. Absent property ${klucz} in transaction!`);
+          }
+        }
+    
+        if(transaction.amount < 0) {
+          throw new Error('Impossible to complete the transaction. Amount is negative!');
+        }
+    }
 
 
 
-}
-
-try {
-    makeTransaction({amount: 20, sourceAccount: "1224", targetAccount: "2345"});
-    console.log("Test 31 passed.");
-} catch(e){
-    console.log("Test 31 failed.")
-}
-try {
-    makeTransaction({ amount: 20, sourceAccounts: "1224", targetAccount: "2345" });
-    console.log("Test 31 failed.");
-} catch (e) {
-    if (e.message === 'Impossible to complete the transaction. Absent property sourceAccount in transaction!') {
-        console.log("Test 31 passed.")
-    } else {
+    try {
+        makeTransaction({amount: 20, sourceAccount: "1224", targetAccount: "2345"});
+        console.log("Test 31 passed.");
+    } catch(e){
         console.log("Test 31 failed.")
     }
-}
-
-try {
-    makeTransaction({ amount: -20, sourceAccount: "1224", targetAccount: "2345" });
-    console.log("Test 31 failed.");
-} catch (e) {
-    if (e.message === 'Impossible to complete the transaction. Amount is negative!') {
-        console.log("Test 31 passed.")
-    } else {
-        console.log("Test 31 failed.")
+    try {
+        makeTransaction({amount: 20, sourceAccounts: "1224", targetAccount: "2345" });
+        console.log("Test 31 failed.");
+    } catch (e){
+        if (e.message === 'Impossible to complete the transaction. Absent property sourceAccount in transaction!') {
+            console.log("Test 31 passed.")
+        } else {
+            console.log("Test 31 failed.")
+        }
     }
-}
+    
+    try {
+        makeTransaction({ amount: -20, sourceAccount: "1224", targetAccount: "2345" });
+        console.log("Test 31 failed.");
+    } catch (e) {
+        if (e.message === 'Impossible to complete the transaction. Amount is negative!') {
+            console.log("Test 31 passed.")
+        } else {
+            console.log("Test 31 failed.")
+        }
+    }
